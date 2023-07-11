@@ -1,0 +1,30 @@
+.card{
+    border:1px solid gray;
+    padding: 3rem;
+    font-size: 1rem;
+    color: #333;
+    height: 4rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.high{
+    background-color:rgb(59, 163, 182);
+    color: white;
+}
+.medium{
+    background-color: rgb(218,153,118);
+
+}
+.low{
+    background-color: rgb(240,226,207);
+
+}
+
+.right-corner{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.5rem;
+}

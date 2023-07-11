@@ -1,0 +1,17 @@
+.card{
+    border:1px solid gray;
+    padding: 3rem;
+    font-size: 1rem;
+    color: #333;
+    height: 4rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    position: relative;
+}
+.card light{
+color: #333;
+}
+
+.card dark {
+    color: white;
+}
