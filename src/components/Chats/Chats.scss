@@ -1,0 +1,99 @@
+ $standard-padding: 0.5em;
+$bubble-border-radius: 17px;
+
+@mixin bot {
+  background:#393e460a;
+  color: #1e1c1c;
+  align-self: flex-start;
+  margin-left: 3rem;
+    margin-top: -2.5rem;
+    padding-top: 1.5rem;
+
+}
+
+@mixin user {
+  background: #e5dfdf;
+  color: #393e46;
+  align-self: flex-end;
+  margin-right: 2.5rem;
+    margin-top: -2.5rem;
+    padding-top: 1rem;
+
+} 
+
+.message-container {
+  overflow-y: scroll;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .message {
+       max-width: 400px; 
+    padding: $standard-padding;
+    border-radius: $bubble-border-radius;
+    overflow-wrap: break-word;
+  }
+
+  .user {
+    @include user;
+    color:blue;
+    border: 1px solid blue;
+    background-color: white;
+  }
+
+  .bot {
+    @include bot;
+   
+  }
+
+  .options {
+    background: white;
+    display: flex;
+    /* align-items: center; */
+
+    > div:first-child {
+      font-size: 1.3em;
+      margin: 0.7em 0.7em 0.9em 0.3em;
+      transform: rotate(90deg);
+
+      i {
+        color: #393e46;
+        animation: arrow-move 1.2s infinite;
+
+        @keyframes arrow-move {
+          0% {
+            transform: translateY(4px);
+          }
+          50% {
+            transform: translateY(0);
+          }
+          100% {
+            transform: translateY(4px);
+          }
+        }
+      }
+    }
+
+    p {
+      padding: $standard-padding;
+      margin-right: 0.8em;
+      @include bot;
+      border-radius: $bubble-border-radius;
+
+      &:hover {
+        opacity: 0.7;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .dummy-div {
+    padding: 0.5em 0;
+  }
+  
+  
+}
+
+
